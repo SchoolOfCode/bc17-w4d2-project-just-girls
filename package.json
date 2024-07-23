@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "express": "^4.19.2"
-  }
+  },
+  "name": "bc17-w4d2-project-just-girls",
+  "version": "1.0.0",
+  "description": "Feel free to delete this and start from scratch.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC"
 }
