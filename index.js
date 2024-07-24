@@ -15,3 +15,30 @@ app.listen(port, () => {
   console.log(` app is running on port ${port}`)
 })
 
+//send a GET request with a user_id to the API to get a users activities, GET request to “http://localhost:3000/activities 
+app.get('/activities/:id', (req, res) => {
+
+}
+)
+
+/*simple dashboard that shows a user all of their activities. refer to the activities.js file
+
+
+
+/*response object always containing a key called data or error, or the status code being an accurate indication 
+of the success/failure (and reason) of the request.*/
+
+
+/*request should succeed, responding with the correct status code and an array of 
+User Activity objects in the response body (response.data).
+// response object
+
+{
+	data: [
+		{ }, // activity object
+		{ }, // activity object
+		{ } // activity object
+	]
+}*/
+
+
