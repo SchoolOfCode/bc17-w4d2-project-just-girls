@@ -1,6 +1,6 @@
 import express from 'express'
 import helmet from 'helmet'
-import { exerciseActivities } from ‘./activities.js’;
+import { exerciseActivities } from './activities.js';
 
 
 //we have imported helmet after installing it, similar to express
@@ -12,11 +12,11 @@ const port = 3000
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
-})
+});
 
 app.listen(port, () => {
   console.log(` app is running on port ${port}`)
-})
+});
 
 //send a GET request with a user_id to the API to get a users activities, GET request to “http://localhost:3000/activities 
 app.get('/activities/:id', (req, res) => { 
@@ -24,8 +24,7 @@ app.get('/activities/:id', (req, res) => {
     error: null, 
     data: exerciseActivities,
   })
- }
-)
+ });
 
 /*simple dashboard that shows a user all of their activities. refer to the activities.js file
 

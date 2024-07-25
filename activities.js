@@ -7,7 +7,7 @@
 }
 	*/
 
-	const exerciseActivities= [
+	export const exerciseActivities= [
 		{
 			"id": "54321234", // UUID
 			"activity_submitted": "1719486190058", // simple Epoc timestamp (Date.now() in JS)
