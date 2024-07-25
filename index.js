@@ -1,5 +1,8 @@
 import express from 'express'
 import helmet from 'helmet'
+import { exerciseActivities } from ‘./activities.js’;
+
+
 //we have imported helmet after installing it, similar to express
 const app = express()
 
@@ -16,9 +19,12 @@ app.listen(port, () => {
 })
 
 //send a GET request with a user_id to the API to get a users activities, GET request to “http://localhost:3000/activities 
-app.get('/activities/:id', (req, res) => {
-
-}
+app.get('/activities/:id', (req, res) => { 
+  res.status(200).json({ 
+    error: null, 
+    data: exerciseActivities,
+  })
+ }
 )
 
 /*simple dashboard that shows a user all of their activities. refer to the activities.js file
