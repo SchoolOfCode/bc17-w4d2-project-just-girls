@@ -19,7 +19,19 @@ app.listen(port, () => {
 });
 
 //send a GET request with a user_id to the API to get a users activities, GET request to “http://localhost:3000/activities 
-app.get('/activities/:id', (req, res) => { 
+
+// app.get('/activities/:id', (req, res) => { 
+//   res.status(200).json({ 
+//     error: null, 
+//     data: exerciseActivities,
+//   })
+//  });
+
+
+
+
+
+app.get('/activities', (req, res) => { 
   res.status(200).json({ 
     error: null, 
     data: exerciseActivities,
