@@ -1,4 +1,4 @@
-import express from 'express'
+import express from 'express' 
 import helmet from 'helmet'
 import { exerciseActivities } from './activities.js';
 
@@ -49,27 +49,31 @@ User Activity objects in the response body (response.data).
 
 
 
-app.post('/activities', (req, res) => {
-  const newActivity = req.body.newActivity
- //Check that the user has inputted a new activity
+app.post('/activities', async (req, res) => {
+  const newActivity = req.body.newActivity; //This is to get the new activity out of the request body (e.g you can see this on postman)
+ //Check that the user has inputted a new activity, if not send and error
   if (!newActivity) { 
     res.status(400).json({
       error: true, 
       data: null,
-    }
-  )
+    });
 }
   try {
-    const exerciseActivities = await createActivity(newActivity) { 
+    const exerciseActivities = await createActivity(newActivity); 
       res.status(201).json({
         error: false, 
         data: exerciseActivities,
-      }
-    );
-  } catch 
-} 
-
+      });
+  } catch (error) {
+    res.status(500).json({
+        error: true,
+        data: null,
+    });
 }
+});
+
+
+
 
 
 
